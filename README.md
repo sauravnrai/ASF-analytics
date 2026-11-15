@@ -15,7 +15,13 @@ A browser-only dataset profiler with text filtering, missing-value counts, descr
 ## Input and privacy
 UTF-8 comma-separated CSV or JSON arrays of flat scalar-valued objects. CSV supports quoted fields, multiline text, escaped quotes and CRLF. Unique nonempty headers required. Limits: 2 MiB, 10,000 rows, 50 columns. Synthetic demo data is included. Formula-prefixed text is neutralized in spreadsheet-oriented CSV exports.
 
-No backend, telemetry, keys, CDNs, or external fonts. Uploaded files are processed locally. Same-tab sessionStorage shares datasets between the suite's apps, but **any site on the same `sauravnrai.github.io` origin can technically access it**. Avoid sensitive data, clear saved workspace when finished, and note that browsers may restore tab sessions. If storage is blocked, use export/import instead.
+No backend, telemetry, keys, CDNs, or external fonts. Uploaded files are processed locally. Same-tab sessionStorage shares datasets between the suite's apps, but **any site on the same `sauravnrai.github.io` origin can technically access it**. Avoid sensitive data, clear saved workspace when finished, and note that browsers may restore tab sessions. If storage is blocked, use export/import to transfer instead.
 
 ## Development / deployment
 `python3 -m http.server 8080 --directory docs` serves the standalone app. GitHub Pages publishes `main` → `/docs`; `.nojekyll` bypasses Jekyll. Local runtime assets intentionally duplicate the hub so deployments do not depend on another site's availability. Keep common `assets/data.js`, `navigation.js`, `styles.css`, and `data/sample.csv` synchronized with [ASF](https://github.com/sauravnrai/ASF). Workspace schema: `asf.workspace.v1`.
+
+## App Network & new guide
+
+[App Network Hub](https://sauravnrai.github.io/) · [Discovery](https://sauravnrai.github.io/discovery/) · [Read the new guide](https://sauravnrai.github.io/ASF-analytics/guide.html) · [Source-project catalog](https://sauravnrai.github.io/projects.html)
+
+Read completeness before conclusions — A practical guide to missing values, numeric inference, and filtered summaries. Global navigation connects every browser app in both directions. Runtime assets remain bundled locally; Discovery email links only open drafts and never claim background delivery. `assets/network.css` keeps the expanded navigation responsive.
